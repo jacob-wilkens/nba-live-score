@@ -7,7 +7,7 @@
   "customizations": {
     "vscode": {
       "extensions": [
-        //"dbaeumer.vscode-eslint",
+        "dbaeumer.vscode-eslint",
         "christian-kohler.npm-intellisense",
         "christian-kohler.path-intellisense",
         "esbenp.prettier-vscode",
@@ -27,7 +27,7 @@
         "Gruntfuggly.todo-tree"
       ]
     }
-  }
+  },
 
   // Features to add to the dev container. More info: https://containers.dev/features.
   // "features": {},
@@ -36,7 +36,7 @@
   // "forwardPorts": [],
 
   // Use 'postCreateCommand' to run commands after the container is created.
-  //"postCreateCommand": "yarn"
+  "postCreateCommand": "yarn; cd server; yarn; cd ../client; yarn"
 
   // Configure tool-specific properties.
   // "customizations": {},
