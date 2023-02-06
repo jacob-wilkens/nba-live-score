@@ -1,7 +1,7 @@
 {
   "arrowParens": "always",
   "bracketSpacing": true,
-  "importOrder": ["^react(.*)$", "<THIRD_PARTY_MODULES>", "^@src/(.*)$", "^[./]", ".css"],
+  "importOrder": ["^express(.*)$", "<THIRD_PARTY_MODULES>", "^@src/(.*)$", "^[./]"],
   "importOrderSeparation": true,
   "importOrderSortSpecifiers": true,
   "jsxSingleQuote": true,
