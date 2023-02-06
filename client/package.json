@@ -7,7 +7,6 @@
     "build": "tsc && vite build",
     "test": "vitest",
     "lint": "eslint ./src --ext .ts,.tsx",
-    "lint-staged": "lint-staged --concurrent false",
     "preview": "vite preview",
     "pretty": "prettier --write .",
     "update": "npx npm-check-updates -u"
@@ -17,9 +16,6 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
-  "pre-commit": [
-    "lint-staged"
-  ],
   "devDependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -43,9 +39,7 @@
     "eslint-plugin-sonarjs": "^0.18.0",
     "eslint-plugin-unicorn": "^45.0.2",
     "jsdom": "^21.1.0",
-    "lint-staged": "^13.1.0",
     "npm-check-updates": "^16.6.4",
-    "pre-commit": "^1.2.2",
     "prettier": "^2.8.3",
     "typescript": "^4.9.5",
     "vite": "^4.1.1",
