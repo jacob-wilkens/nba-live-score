@@ -17,7 +17,6 @@ module.exports = {
     'plugin:promise/recommended',
     'prettier',
   ],
-  overrides: [],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 'latest',
@@ -34,6 +33,7 @@ module.exports = {
     'no-restricted-imports': ['error', { patterns: ['../'] }],
     'unicorn/prefer-node-protocol': 'off',
     'unicorn/prefer-module': 'off',
+    '@typescript-eslint/no-unused-vars': 'off',
   },
   overrides: [{ files: '*vite-env.d.ts', rules: { 'unicorn/prevent-abbreviations': 'off', 'unicorn/filename-case': 'off' } }],
   settings: {
@@ -41,4 +41,5 @@ module.exports = {
       version: 'detect',
     },
   },
+  ignorePatterns: ['.eslintrc.js'],
 };

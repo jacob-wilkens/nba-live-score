@@ -20,4 +20,5 @@ module.exports = {
     'unicorn/prefer-node-protocol': 'off',
     'unicorn/prefer-module': 'off',
   },
+  ignorePatterns: ['.eslintrc.js'],
 };
