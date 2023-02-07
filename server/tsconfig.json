@@ -5,7 +5,10 @@
     "module": "commonjs",
     "moduleResolution": "node",
     "baseUrl": ".",
-    // "paths": {},                                      /* Specify a set of entries that re-map imports to additional lookup locations. */
+    "paths": {
+      "@middleware/": ["src/middleware/"],
+      "@middleware/*": ["src/middleware/*"]
+    },
     "sourceMap": true,
     "outDir": "dist",
     "esModuleInterop": true,

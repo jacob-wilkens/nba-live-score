@@ -19,6 +19,7 @@ module.exports = {
     'no-restricted-imports': ['error', { patterns: ['../'] }],
     'unicorn/prefer-node-protocol': 'off',
     'unicorn/prefer-module': 'off',
+    'unicorn/prevent-abbreviations': 'off',
   },
   ignorePatterns: ['.eslintrc.js'],
 };
