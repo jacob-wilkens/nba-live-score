@@ -6,7 +6,7 @@
     "moduleResolution": "node",
     "baseUrl": ".",
     "paths": {
-      "@middleware/": ["src/middleware/"],
+      "@middleware": ["src/middleware"],
       "@middleware/*": ["src/middleware/*"]
     },
     "sourceMap": true,

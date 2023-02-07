@@ -1,6 +1,6 @@
 import express from 'express';
 
-import { errorHandler, errorNotFoundHandler } from '@middleware/';
+import { errorHandler, errorNotFoundHandler } from '@middleware';
 import logger from 'morgan';
 import path from 'path';
 
