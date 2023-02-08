@@ -1,9 +1,3 @@
-function App() {
-  return (
-    <div id='main'>
-      <h1>Hello World</h1>
-    </div>
-  );
+export default function App() {
+  return <h1 className='text-3xl font-bold underline'>Hello World</h1>;
 }
-
-export default App;

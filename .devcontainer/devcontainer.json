@@ -7,25 +7,27 @@
   "customizations": {
     "vscode": {
       "extensions": [
-        "dbaeumer.vscode-eslint",
-        "christian-kohler.npm-intellisense",
-        "christian-kohler.path-intellisense",
-        "esbenp.prettier-vscode",
-        "usernamehw.errorlens",
-        "streetsidesoftware.code-spell-checker",
-        "mflo999.lintel",
-        "Zignd.html-css-class-completion",
-        "WallabyJs.console-ninja",
-        "ChakrounAnas.turbo-console-log",
-        "mscolnick.export-typescript",
-        "eamodio.gitlens",
-        "formulahendry.auto-close-tag",
-        "formulahendry.auto-rename-tag",
-        "dsznajder.es7-react-js-snippets",
-        "vincaslt.highlight-matching-tag",
-        "ecmel.vscode-html-css",
-        "Gruntfuggly.todo-tree"
-      ]
+		"dbaeumer.vscode-eslint",
+		"christian-kohler.npm-intellisense",
+		"christian-kohler.path-intellisense",
+		"esbenp.prettier-vscode",
+		"usernamehw.errorlens",
+		"streetsidesoftware.code-spell-checker",
+		"mflo999.lintel",
+		"Zignd.html-css-class-completion",
+		"WallabyJs.console-ninja",
+		"ChakrounAnas.turbo-console-log",
+		"mscolnick.export-typescript",
+		"eamodio.gitlens",
+		"formulahendry.auto-close-tag",
+		"formulahendry.auto-rename-tag",
+		"dsznajder.es7-react-js-snippets",
+		"vincaslt.highlight-matching-tag",
+		"ecmel.vscode-html-css",
+		"Gruntfuggly.todo-tree",
+		"MS-vsliveshare.vsliveshare",
+		"bradlc.vscode-tailwindcss"
+	]
     }
   },
 
