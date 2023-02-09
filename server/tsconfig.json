@@ -7,7 +7,15 @@
     "baseUrl": ".",
     "paths": {
       "@middleware": ["src/middleware"],
-      "@middleware/*": ["src/middleware/*"]
+      "@middleware/*": ["src/middleware/*"],
+      "@routes": ["src/routes"],
+      "@routes/*": ["src/routes/*"],
+      "@controllers": ["src/controllers"],
+      "@controllers/*": ["src/controllers/*"],
+      "@types": ["src/types"],
+      "@util": ["src/util"],
+      "@util/*": ["src/util/*"],
+      "@config": ["src/config"]
     },
     "sourceMap": true,
     "outDir": "dist",

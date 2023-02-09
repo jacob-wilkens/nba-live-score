@@ -26,7 +26,11 @@
 		"ecmel.vscode-html-css",
 		"Gruntfuggly.todo-tree",
 		"MS-vsliveshare.vsliveshare",
-		"bradlc.vscode-tailwindcss"
+		"bradlc.vscode-tailwindcss",
+		"humao.rest-client",
+		"MariusAlchimavicius.json-to-ts",
+		"mikestead.dotenv",
+		"GitHub.vscode-pull-request-github"
 	]
     }
   },
@@ -38,7 +42,7 @@
   // "forwardPorts": [],
 
   // Use 'postCreateCommand' to run commands after the container is created.
-  "postCreateCommand": "yarn; cd server; yarn; cd ../client; yarn"
+  "postCreateCommand": "yarn; cd server; yarn; cd ../client; yarn; ../"
 
   // Configure tool-specific properties.
   // "customizations": {},
