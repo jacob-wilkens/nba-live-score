@@ -1,69 +1,45 @@
-/* eslint-disable autofix/no-unused-vars */
-export enum Stage {
-  NotStarted = 1,
-  Live = 2,
-  Finished = 3,
-}
-
-export type GameData = {
-  errors: unknown[];
-  results: number;
-  response: Response[];
+export type LiveData = {
+  scoreboard: Scoreboard;
 };
 
-export type Response = {
-  id?: number;
-  date?: GameDate;
-  stage?: Stage;
-  status?: Status;
-  periods?: Periods;
-  teams?: Teams;
-  scores?: Scores;
+type Scoreboard = {
+  gameDate: string;
+  games: Game[];
 };
 
-export type Scores = {
-  visitors: TeamGameSummary;
-  home: TeamGameSummary;
+type Game = {
+  gameId: string;
+  gameCode: string;
+  gameStatus: number;
+  gameStatusText: string;
+  period: number;
+  gameClock: string;
+  gameTimeUTC: string;
+  gameEt: string;
+  regulationPeriods: number;
+  ifNecessary: boolean;
+  seriesGameNumber: string;
+  seriesText: string;
+  homeTeam: TeamData;
+  awayTeam: TeamData;
 };
 
-export type TeamGameSummary = {
-  linescore: string[];
-  points: number;
+type TeamData = {
+  teamId: number;
+  teamName: string;
+  teamCity: string;
+  teamTricode: string;
+  wins: number;
+  losses: number;
+  score: number;
+  seed?: unknown;
+  inBonus?: string;
+  timeoutsRemaining: number;
+  periods: Period[];
 };
 
-export type Series = {
-  win: number;
-  loss: number;
-};
-
-export type Teams = {
-  visitors: TeamInfo;
-  home: TeamInfo;
-};
-
-export type TeamInfo = {
-  id: number;
-  name: string;
-  nickname: string;
-  code: string;
-  logo: string;
-};
-
-export type Periods = {
-  current: number;
-  total: number;
-  endOfPeriod: boolean;
-};
-
-export type Status = {
-  clock: string;
-  halftime: boolean;
-  short: number;
-  long: string;
-};
-
-export type GameDate = {
-  start: string;
-  end?: string;
-  duration?: string | number;
+type Period = {
+  period: number;
+  periodType: string;
+  score: number;
 };

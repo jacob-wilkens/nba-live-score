@@ -5,7 +5,7 @@
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "allowJs": false,
     "skipLibCheck": true,
-    "esModuleInterop": false,
+    "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
@@ -18,7 +18,9 @@
     "baseUrl": ".",
     "paths": {
       "@hooks": ["src/hooks"],
-      "@types": ["src/types"]
+      "@types": ["src/types"],
+      "@components": ["src/components"],
+      "@utils/*": ["src/utils/*"]
     }
   },
   "include": ["src"],

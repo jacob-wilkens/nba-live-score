@@ -1,12 +1,22 @@
 import type { NextFunction, Request, Response } from 'express';
 
-import nbaClient from '@util/nbaClient';
+import { readFile } from 'fs/promises';
+import path from 'path';
+
+//import type { LiveData } from '@types';
+//import nbaClient from '@util/nbaClient';
+
+//const SCOREBOARD_URL = '/scoreboard/todaysScoreboard_00.json';
 
 const getLive = async (req: Request, res: Response, next: NextFunction) => {
   try {
-    const { data } = await nbaClient.get('/games', { params: { live: 'all' } });
+    // const {
+    //   data: { scoreboard },
+    // } = await nbaClient.get<LiveData>(SCOREBOARD_URL, { params: { live: 'all' } });
 
-    res.json({ data });
+    const scoreboard = await readFile(path.join(__dirname, '../../example/data.json'), { encoding: 'utf8' });
+
+    res.json({ data: JSON.parse(scoreboard) });
   } catch (error) {
     next(error);
   }
