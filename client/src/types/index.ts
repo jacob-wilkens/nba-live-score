@@ -5,7 +5,7 @@ export type UseQueryResponse<T> = {
   data: T;
 };
 
-export type Scoreboard = {
+export type ScoreboardData = {
   gameDate: string;
   games: Game[];
 };

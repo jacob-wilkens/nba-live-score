@@ -1,5 +1,6 @@
 import { ScoreboardTeamRow } from '@components';
 import type { Game } from '@types';
+import { GameStatus } from '@types';
 import dayjs from '@utils/dayjs';
 
 type Properties = {
@@ -18,17 +19,16 @@ TODO: Experiment with responsiveness
 */
 
 export function ScoreboardCard({ game }: Properties) {
-  // eslint-disable-next-line autofix/no-unused-vars
-  const { gameStatusText, gameTimeUTC, awayTeam, homeTeam } = game;
+  const { gameStatusText, gameTimeUTC, awayTeam, homeTeam, gameStatus } = game;
 
   // Parse the UTC date and time string
-  const userGameTime = dayjs.utc(gameTimeUTC).local().format('h:mm a z');
+  const userGameTime = dayjs.utc(gameTimeUTC).local().format('h:mm A z');
 
   return (
     <div className='stat'>
-      <div className='stat-title'>{userGameTime}</div>
-      <ScoreboardTeamRow team={homeTeam} />
-      <ScoreboardTeamRow team={awayTeam} />
+      <div className='stat-title text-sm'>{gameStatus === GameStatus.NotStarted ? userGameTime : gameStatusText}</div>
+      <ScoreboardTeamRow team={homeTeam} gameStatus={gameStatus} />
+      <ScoreboardTeamRow team={awayTeam} gameStatus={gameStatus} />
     </div>
   );
 }
