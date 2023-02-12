@@ -1,7 +1,7 @@
-import { LiveStat } from '@components';
+import { ScoreboardCard } from '@components';
 import { useQueryGetLive } from '@hooks';
 
-export function LiveStats() {
+export function Scoreboard() {
   const { data: { games, gameDate } = { gameDate: '', games: [] } } = useQueryGetLive();
 
   return (
@@ -10,7 +10,7 @@ export function LiveStats() {
         <div className='stat-title flex items-center'>{gameDate}</div>
       </div>
       {games.map((game) => (
-        <LiveStat key={game.gameId} game={game} />
+        <ScoreboardCard key={game.gameId} game={game} />
       ))}
     </div>
   );

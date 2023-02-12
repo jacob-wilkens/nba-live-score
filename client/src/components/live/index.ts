@@ -1,2 +1,3 @@
-export * from './LiveStat';
-export * from './LiveStats';
+export * from './Scoreboard';
+export * from './ScoreboardCard';
+export * from './ScoreboardTeamRow';

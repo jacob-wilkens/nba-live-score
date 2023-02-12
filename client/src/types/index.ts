@@ -13,7 +13,7 @@ export type Scoreboard = {
 export type Game = {
   gameId: string;
   gameCode: string;
-  gameStatus: number;
+  gameStatus: GameStatus;
   gameStatusText: string;
   period: number;
   gameClock: string;
@@ -78,6 +78,12 @@ export enum NBATeam {
   TOR = 'TOR',
   UTA = 'UTA',
   WAS = 'WAS',
+}
+
+export enum GameStatus {
+  NotStarted = 1,
+  Live = 2,
+  Finished = 3,
 }
 
 export interface IconProperties extends SVGAttributes<SVGElement> {
