@@ -1,4 +1,5 @@
 import type { Game } from '@types';
+import { IconPicker } from '@utils/IconPicker';
 import dayjs from '@utils/dayjs';
 
 type Properties = {
@@ -17,9 +18,15 @@ export function LiveStat({ game }: Properties) {
       <div className='stat-title'>{userGameTime}</div>
       <div>
         <div className='stat-desc'>{homeTeam.teamTricode}</div>
+        <div>
+          <IconPicker teamCode={homeTeam.teamTricode} size={35} />
+        </div>
       </div>
       <div>
         <div className='stat-desc'>{awayTeam.teamTricode}</div>
+        <div>
+          <IconPicker teamCode={awayTeam.teamTricode} size={35} />
+        </div>
       </div>
     </div>
   );
