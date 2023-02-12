@@ -4,7 +4,6 @@ import createError from 'http-errors';
 
 declare type WebError = Error & { status?: number };
 
-
 export const errorHandler = (err: WebError, req: Request, res: Response, next: NextFunction): void => {
   // set locals, only providing error in development
   res.locals.message = err.message;

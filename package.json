@@ -6,8 +6,8 @@
     "start:client": "cd ./client; yarn dev",
     "start:server": "cd ./server; yarn dev",
     "prepare": "husky install",
-    "start": "concurrently -k --names \"client,server\" -c \"red,blue\" \"yarn start:client\"  \"yarn start:server\"",
-    "install-all": "yarn; cd server/; yarn; cd ../client; yarn; cd ../"
+    "start": "concurrently -k -c \"red,blue\" npm:start:*",
+    "install:all": "yarn; cd server/; yarn; cd ../client; yarn; cd ../"
   },
   "devDependencies": {
     "concurrently": "^7.6.0",
