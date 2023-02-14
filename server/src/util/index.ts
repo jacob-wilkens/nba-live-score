@@ -1,1 +1,2 @@
-export * from './nbaClient';
+export * from './nbaLiveClient';
+export * from './nbaStatsClient';
