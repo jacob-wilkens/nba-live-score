@@ -3,7 +3,7 @@ import type { Icon } from '@types';
 import { NBATeam } from '@types';
 
 // eslint-disable-next-line autofix/no-unused-vars
-const NBA_TEAMS: { [key in keyof typeof NBATeam]: Icon } = {
+export const NBA_TEAMS: { [key in keyof typeof NBATeam]: Icon } = {
   [NBATeam.ATL]: <NBAIcons.ATL />,
   [NBATeam.BOS]: <NBAIcons.BOS />,
   [NBATeam.BKN]: <NBAIcons.BKN />,
@@ -41,7 +41,7 @@ type IconPickerProperties = {
   teamCode: NBATeam;
 };
 
-export const IconPicker = ({ size = 100, teamCode }: IconPickerProperties) => {
+export const IconPicker = ({ size = 50, teamCode }: IconPickerProperties) => {
   const team = NBA_TEAMS[teamCode];
 
   return { ...team, props: { ...team.props, size } };

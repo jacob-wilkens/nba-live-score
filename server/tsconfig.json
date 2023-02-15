@@ -18,7 +18,9 @@
       "@util/*": ["src/util/*"],
       "@config": ["src/config"],
       "@validators": ["src/validators"],
-      "@validators/*": ["src/validators/*"]
+      "@validators/*": ["src/validators/*"],
+      "@services": ["src/services"],
+      "@services/*": ["src/services/*"]
     },
     "sourceMap": true,
     "outDir": "dist",

@@ -35,6 +35,7 @@ module.exports = {
     'unicorn/prefer-node-protocol': 'off',
     'unicorn/prefer-module': 'off',
     '@typescript-eslint/no-unused-vars': 'off',
+    'unicorn/prevent-abbreviations': 'off',
   },
   overrides: [{ files: '*vite-env.d.ts', rules: { 'unicorn/prevent-abbreviations': 'off', 'unicorn/filename-case': 'off' } }],
   settings: {

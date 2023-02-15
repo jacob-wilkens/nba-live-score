@@ -17,6 +17,5 @@ export const useQueryGetLive = () => {
     refetchInterval: REFETCH_INTERVAL,
     retryDelay: RETRY_DELAY,
     retry: RETRY,
-    //notifyOnChangeProps: ['data'],
   });
 };
