@@ -16,7 +16,9 @@
       "@types/*": ["src/types/*"],
       "@util": ["src/util"],
       "@util/*": ["src/util/*"],
-      "@config": ["src/config"]
+      "@config": ["src/config"],
+      "@validators": ["src/validators"],
+      "@validators/*": ["src/validators/*"]
     },
     "sourceMap": true,
     "outDir": "dist",
