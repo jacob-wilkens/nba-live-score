@@ -9,11 +9,11 @@ export type StandingsData = {
 export type TeamStanding = {
   teamId: string;
   team: string;
+  teamTriCode: NBATeam;
   g: string;
   w: string;
   l: string;
   wPct: string;
   homeRecord: string;
   roadRecord: string;
-  teamCode: NBATeam;
 };
