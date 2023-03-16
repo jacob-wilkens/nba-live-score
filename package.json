@@ -3,10 +3,14 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
+    "start:client": "cd ./client; yarn dev",
+    "start:server": "cd ./server; yarn dev",
     "prepare": "husky install",
-    "install-all": "yarn; cd server/; yarn; cd ../client; yarn; cd ../"
+    "start": "concurrently -k -c \"red,blue\" npm:start:*",
+    "install:all": "yarn; cd server/; yarn; cd ../client; yarn; cd ../"
   },
   "devDependencies": {
+    "concurrently": "^7.6.0",
     "husky": "^8.0.3",
     "lint-staged": "^13.1.0"
   }

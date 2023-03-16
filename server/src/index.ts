@@ -1,5 +1,7 @@
+import { config } from '@config';
+
 import { app } from './app';
 
-const port = app.get('port') as string;
+const { PORT } = config;
 
-app.listen(port, () => console.log(`listening on ${port}`));
+app.listen(PORT, () => console.log(`listening on ${PORT}`));

@@ -4,16 +4,13 @@ import axios from 'axios';
 
 const axiosInstance = axios.create({ baseURL: '/api' });
 
-export const axiosGet = async <T>(url: string, config?: AxiosRequestConfig) => {
-  // eslint-disable-next-line no-useless-catch
+export const axiosGet = async <T>(url: string, config?: AxiosRequestConfig): Promise<T> => {
   try {
-    const {
-      data: { data },
-    } = await axiosInstance.get<UseQueryResponse<T>>(url, config);
+    const { data } = await axiosInstance.get<UseQueryResponse<T>>(url, config);
 
-    return data;
-    // eslint-disable-next-line sonarjs/no-useless-catch
+    return data.data;
   } catch (error) {
+    console.error(error);
     throw error;
   }
 };

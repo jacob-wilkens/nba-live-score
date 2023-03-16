@@ -13,15 +13,23 @@
       "@controllers": ["src/controllers"],
       "@controllers/*": ["src/controllers/*"],
       "@types": ["src/types"],
+      "@types/*": ["src/types/*"],
       "@util": ["src/util"],
       "@util/*": ["src/util/*"],
-      "@config": ["src/config"]
+      "@config": ["src/config"],
+      "@validators": ["src/validators"],
+      "@validators/*": ["src/validators/*"],
+      "@services": ["src/services"],
+      "@services/*": ["src/services/*"],
+      "@data/*": ["src/data/*"]
     },
     "sourceMap": true,
     "outDir": "dist",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "strict": true
+    "strict": true,
+    "resolveJsonModule": true
   },
-  "include": ["src"]
+  "include": ["src"],
+  "exclude": ["src/**/*.test.ts"]
 }

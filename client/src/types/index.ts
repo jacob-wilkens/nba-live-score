@@ -1,73 +1,48 @@
+import type { ReactElement, SVGAttributes } from 'react';
+
+/* eslint-disable autofix/no-unused-vars */
 export type UseQueryResponse<T> = {
   data: T;
 };
 
-/* eslint-disable autofix/no-unused-vars */
-export enum Stage {
-  NotStarted = 1,
-  Live = 2,
-  Finished = 3,
+export enum NBATeam {
+  ATL = 'ATL',
+  BOS = 'BOS',
+  BKN = 'BKN',
+  CHA = 'CHA',
+  CHI = 'CHI',
+  CLE = 'CLE',
+  DAL = 'DAL',
+  DEN = 'DEN',
+  DET = 'DET',
+  GSW = 'GSW',
+  HOU = 'HOU',
+  IND = 'IND',
+  LAC = 'LAC',
+  LAL = 'LAL',
+  MEM = 'MEM',
+  MIA = 'MIA',
+  MIL = 'MIL',
+  MIN = 'MIN',
+  NOP = 'NOP',
+  NYK = 'NYK',
+  OKC = 'OKC',
+  ORL = 'ORL',
+  PHI = 'PHI',
+  PHX = 'PHX',
+  POR = 'POR',
+  SAC = 'SAC',
+  SAS = 'SAS',
+  TOR = 'TOR',
+  UTA = 'UTA',
+  WAS = 'WAS',
 }
 
-export type GameData = {
-  errors: unknown[];
-  results: number;
-  response: Response[];
-};
+export interface IconProperties extends SVGAttributes<SVGElement> {
+  size?: number;
+}
 
-export type Response = {
-  id?: number;
-  date?: GameDate;
-  stage?: Stage;
-  status?: Status;
-  periods?: Periods;
-  teams?: Teams;
-  scores?: Scores;
-};
+export type Icon = ReactElement<IconProperties>;
 
-export type Scores = {
-  visitors: TeamGameSummary;
-  home: TeamGameSummary;
-};
-
-export type TeamGameSummary = {
-  linescore: string[];
-  points: number;
-};
-
-export type Series = {
-  win: number;
-  loss: number;
-};
-
-export type Teams = {
-  visitors: TeamInfo;
-  home: TeamInfo;
-};
-
-export type TeamInfo = {
-  id: number;
-  name: string;
-  nickname: string;
-  code: string;
-  logo: string;
-};
-
-export type Periods = {
-  current: number;
-  total: number;
-  endOfPeriod: boolean;
-};
-
-export type Status = {
-  clock: string;
-  halftime: boolean;
-  short: number;
-  long: string;
-};
-
-export type GameDate = {
-  start: string;
-  end?: string;
-  duration?: string | number;
-};
+export * from './live';
+export * from './standings';
